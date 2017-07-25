@@ -1,0 +1,47 @@
+* {
+    -fx-font-family: "Montserrat";
+    -fx-alignment: center;
+    -fx-text-fill: #ffffff;
+}
+
+
+#container {
+    -fx-background-image: url("/images/background.png")
+}
+
+#time {
+    -fx-content-display: center;
+    -fx-font-size: 90px;
+    -fx-pref-width: 350px;
+}
+
+.buttons {
+    -fx-spacing: 10px;
+    -fx-padding: 5px;
+    -fx-border-insets: 5px;
+    -fx-background-insets: 5px;
+
+}
+
+.button {
+    -fx-padding: 8px 29px;
+    -fx-background-position: center center;
+    -fx-border-radius: 0px;
+    -fx-shadow-highlight-color : transparent;
+    -fx-outer-border : transparent;
+    -fx-inner-border : transparent;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: stretch;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color : transparent;
+    -fx-font-weight: bold;
+
+}
+
+.paures {
+    -fx-background-image: url("/images/paures.png");
+}
+
+.stares {
+    -fx-background-image: url("/images/stares.png");
+}

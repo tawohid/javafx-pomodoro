@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="container" stylesheets="/css/main.css" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1">
+
+    <Label fx:id="time" text="00:00">
+      <effect>
+         <DropShadow blurType="GAUSSIAN" color="#00000072" height="33.15" offsetY="3.0" radius="13.0375" spread="0.05" />
+      </effect>
+    </Label>
+
+    <HBox styleClass="buttons">
+            <Button focusTraversable="false" styleClass="paures" text="RESUME">
+                <effect>
+               <DropShadow blurType="GAUSSIAN" color="#00000048" height="36.18" offsetY="4.0" radius="16.8325" width="33.15" />
+            </effect>
+            </Button>
+            <Button focusTraversable="false" styleClass="stares" text="RESTART">
+                <effect>
+                <DropShadow blurType="GAUSSIAN" color="#00000048" height="36.18" offsetY="4.0" radius="16.8325" width="33.15" />
+            </effect>
+            </Button>
+
+    </HBox>
+
+
+</VBox>
