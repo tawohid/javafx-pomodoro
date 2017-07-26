@@ -5,7 +5,7 @@ public class Attempt {
     private int RemaingSeconds;
     private AttemptKind Kind;
 
-    public Attempt(AttemptKind kind) {
+    public Attempt(AttemptKind kind, String s) {
         Kind = kind;
         RemaingSeconds = kind.getTotalSeconds();
     }
@@ -16,6 +16,22 @@ public class Attempt {
 
     public AttemptKind getKind() {
         return Kind;
+    }
+
+    public void tick() {
+        RemaingSeconds--;
+    }
+
+    @Override
+    public String toString() {
+        return "Attempt{" +
+                "RemaingSeconds=" + RemaingSeconds +
+                ", Kind=" + Kind +
+                '}';
+    }
+
+    public void save() {
+        System.out.println("Saving..");
     }
 }
 

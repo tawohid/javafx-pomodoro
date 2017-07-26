@@ -5,22 +5,40 @@
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
 
-<VBox fx:id="container" stylesheets="/css/main.css" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1">
+<?import javafx.scene.layout.StackPane?>
+<VBox fx:id="container" styleClass="container" stylesheets="/css/main.css" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.zuu.pomodoro.controllers.Home">
 
-    <Label fx:id="time" text="00:00">
+
+    <Label fx:id="title" text="B  E  G  I  N">
+        <effect>
+            <DropShadow blurType="GAUSSIAN" color="#00000072" height="33.15" offsetY="3.0" radius="13.0375" spread="0.05" />
+        </effect>
+    </Label>
+
+    <Line styleClass="bar" endX="58.0" fill="BLACK" startX="-58.0" stroke="WHITE" />
+
+    <Label fx:id="time" text="${controller.timerText}">
       <effect>
          <DropShadow blurType="GAUSSIAN" color="#00000072" height="33.15" offsetY="3.0" radius="13.0375" spread="0.05" />
       </effect>
     </Label>
 
     <HBox styleClass="buttons">
-            <Button focusTraversable="false" styleClass="paures" text="RESUME">
+        <StackPane>
+            <Button onAction="#handlePlay" focusTraversable="false" styleClass="paures,play" text="RESUME">
                 <effect>
                <DropShadow blurType="GAUSSIAN" color="#00000048" height="36.18" offsetY="4.0" radius="16.8325" width="33.15" />
             </effect>
             </Button>
-            <Button focusTraversable="false" styleClass="stares" text="RESTART">
+            <Button onAction="#handlePause" focusTraversable="false" styleClass="paures,pause" text="PAUSE">
+                <effect>
+                    <DropShadow blurType="GAUSSIAN" color="#00000048" height="36.18" offsetY="4.0" radius="16.8325" width="33.15" />
+                </effect>
+            </Button>
+        </StackPane>
+            <Button onAction="#handleRestart" focusTraversable="false" styleClass="stares" text="RESTART">
                 <effect>
                 <DropShadow blurType="GAUSSIAN" color="#00000048" height="36.18" offsetY="4.0" radius="16.8325" width="33.15" />
             </effect>

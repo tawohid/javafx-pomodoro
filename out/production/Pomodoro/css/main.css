@@ -5,14 +5,25 @@
 }
 
 
-#container {
+.container {
     -fx-background-image: url("/images/background.png")
+}
+
+#title {
+    
 }
 
 #time {
     -fx-content-display: center;
     -fx-font-size: 90px;
     -fx-pref-width: 350px;
+    -fx-translate-y: 10px;
+}
+
+.bar {
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.82), 5, 0.0, 0, 2);
+    -fx-translate-y: 8px;
+
 }
 
 .buttons {
@@ -24,7 +35,8 @@
 }
 
 .button {
-    -fx-padding: 8px 29px;
+    -fx-pref-width: 116px;
+    -fx-pref-height: 34px;
     -fx-background-position: center center;
     -fx-border-radius: 0px;
     -fx-shadow-highlight-color : transparent;
@@ -35,6 +47,8 @@
     -fx-focus-color: transparent;
     -fx-faint-focus-color : transparent;
     -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-translate-y: 10px;
 
 }
 
@@ -44,4 +58,26 @@
 
 .stares {
     -fx-background-image: url("/images/stares.png");
+}
+
+/* STATES */
+
+.focus {
+    -fx-background-image: url("/images/FOCUSbg.png");
+}
+
+.break {
+    -fx-background-image: url("/images/BREAKbg.png");
+}
+
+.pause {
+    visibility: hidden;
+}
+
+.playing .pause {
+    visibility: visible;
+}
+
+.playing .play {
+    visibility: hidden;
 }
